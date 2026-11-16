@@ -1,0 +1,250 @@
+.kq-rest-minigame {
+  min-height: 100%;
+  padding: calc(10px + env(safe-area-inset-top)) 16px 96px;
+  background: #111014;
+}
+
+.kq-rest-minigame .kq-game-head {
+  height: 54px;
+}
+
+.kq-rest-minigame .kq-game-head b {
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.kq-rest-minigame .kq-star-wallet {
+  min-width: 62px;
+  padding: 8px 12px;
+  border: 1px solid #48464d;
+  border-radius: 22px;
+  color: #d6ff00;
+  font-size: 12px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.kq-rest-minigame .kq-game-copy {
+  margin: 14px 4px 18px;
+}
+
+.kq-rest-minigame .kq-game-copy h1 {
+  margin: 0 0 5px;
+  font-size: clamp(34px, 10vw, 44px);
+  font-weight: 950;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.kq-rest-minigame .kq-game-copy p {
+  color: #fff;
+  font-size: 15px;
+}
+
+.kq-rest-stage {
+  height: clamp(340px, 49vh, 430px);
+  overflow: hidden;
+  border: 3px solid #fff;
+  border-radius: 34px;
+  background: #111014;
+}
+
+.kq-rest-cloud-badge {
+  position: absolute;
+  top: 8%;
+  left: 6%;
+  display: grid;
+  width: 88px;
+  height: 88px;
+  place-items: center;
+  border-radius: 50%;
+  background: #ff35b5;
+}
+
+.kq-rest-cloud-badge svg {
+  width: 48px;
+  fill: #fff;
+}
+
+.kq-rest-stage .kq-drop {
+  top: 8%;
+  right: 6%;
+  display: flex;
+  width: 118px;
+  height: 118px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  border-width: 3px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1.25;
+}
+
+.kq-rest-stage .kq-drop b {
+  color: #d6ff00;
+  font-size: 20px;
+}
+
+.kq-rest-bed {
+  right: 6%;
+  bottom: 5%;
+  left: 6%;
+  height: 32%;
+  border: 7px solid #fff;
+  border-radius: 36px;
+  background: #0879ff;
+}
+
+.kq-rest-bed::after {
+  display: none;
+}
+
+.kq-rest-pillow {
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  width: 26%;
+  height: 39%;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.kq-rest-character-wrap {
+  position: absolute;
+  z-index: 3;
+  bottom: 23%;
+  left: 50%;
+  width: min(54%, 210px);
+  height: 48%;
+  transform: translateX(-50%);
+}
+
+.kq-rest-character {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.kq-rest-closed-eyes {
+  position: absolute;
+  top: 39%;
+  left: 39%;
+  display: flex;
+  width: 27%;
+  justify-content: space-between;
+}
+
+.kq-rest-closed-eyes i {
+  width: 42%;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff35b5;
+  border-bottom: 4px solid #111014;
+}
+
+.kq-rest-sleep {
+  position: absolute;
+  z-index: 4;
+  bottom: 48%;
+  left: 54%;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 950;
+  letter-spacing: 5px;
+  transform: rotate(-24deg);
+}
+
+.kq-rest-rays {
+  position: absolute;
+  bottom: 43%;
+  left: 8%;
+  width: 42px;
+  height: 42px;
+}
+
+.kq-rest-rays i {
+  position: absolute;
+  width: 9px;
+  height: 25px;
+  border-radius: 8px;
+  background: #d6ff00;
+}
+
+.kq-rest-rays i:nth-child(1) { left: 3px; bottom: 0; transform: rotate(92deg); }
+.kq-rest-rays i:nth-child(2) { left: 13px; top: 1px; transform: rotate(-48deg); }
+.kq-rest-rays i:nth-child(3) { right: 3px; top: 0; transform: rotate(-22deg); }
+
+.kq-drag-moon {
+  z-index: 5;
+  right: 3% !important;
+  bottom: 1% !important;
+  width: 92px;
+  height: 92px;
+  border: 5px solid #111014;
+}
+
+.kq-drag-moon svg {
+  width: 46px;
+  fill: none;
+  stroke: #111014;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.kq-rest-stage.is-playing .kq-drag-moon {
+  cursor: grab;
+  animation: kq-moon-ready 1.2s ease-in-out infinite alternate;
+}
+
+.kq-rest-status {
+  min-height: 18px;
+  margin: 10px 4px 0;
+  color: #c6c2cc;
+  font-size: 11px;
+  text-align: center;
+}
+
+.kq-room-button.kq-rest-play {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  border-radius: 28px;
+  font-size: 19px;
+}
+
+.kq-rest-play span {
+  font-size: 17px;
+}
+
+.kq-rest-stage.is-playing .kq-drop {
+  border-color: #d6ff00;
+  color: #d6ff00;
+  animation: kq-drop-ready 1s ease-in-out infinite alternate;
+}
+
+@keyframes kq-moon-ready {
+  to { transform: scale(1.06); }
+}
+
+@keyframes kq-drop-ready {
+  to { background: rgb(214 255 0 / 8%); }
+}
+
+@media (max-width: 360px) {
+  .kq-rest-minigame { padding-right: 12px; padding-left: 12px; }
+  .kq-rest-stage { height: 340px; }
+  .kq-rest-cloud-badge { width: 70px; height: 70px; }
+  .kq-rest-stage .kq-drop { width: 100px; height: 100px; font-size: 10px; }
+  .kq-drag-moon { width: 78px; height: 78px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kq-rest-stage.is-playing .kq-drag-moon,
+  .kq-rest-stage.is-playing .kq-drop { animation: none; }
+}

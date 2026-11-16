@@ -1,0 +1,307 @@
+.kq-create-minigame {
+  min-height: 100%;
+  padding: calc(10px + env(safe-area-inset-top)) 16px 96px;
+  background: #111014;
+  color: #fff;
+}
+
+.kq-create-minigame .kq-game-head {
+  height: 54px;
+}
+
+.kq-create-minigame .kq-game-head button {
+  border-color: #48464d;
+  color: #fff;
+}
+
+.kq-create-minigame .kq-game-head b,
+.kq-create-minigame .kq-game-copy small {
+  color: #d6ff00;
+}
+
+.kq-create-minigame .kq-star-wallet {
+  border: 1px solid #48464d;
+  border-radius: 22px;
+  background: #1d1b20;
+  color: #d6ff00;
+}
+
+.kq-create-minigame .kq-game-copy {
+  margin: 12px 4px 14px;
+}
+
+.kq-create-minigame .kq-game-copy h1 {
+  color: #fff;
+  font-size: clamp(32px, 9vw, 42px);
+}
+
+.kq-create-minigame .kq-game-copy p {
+  color: #c6c2cc;
+}
+
+.kq-create-minigame .kq-decor-canvas {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  height: clamp(250px, 34vh, 320px);
+  overflow: hidden;
+  margin: 0 auto;
+  border: 5px solid #fff9e9;
+  border-radius: 27px;
+  background: #dfb17a;
+  box-shadow: 0 4px 0 #c9a673;
+  isolation: isolate;
+}
+
+.kq-create-minigame .kq-decor-room {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0 30px,
+    rgb(130 83 43 / 17%) 31px 33px
+  ), #dfb17a;
+}
+
+.kq-create-minigame .kq-room-window {
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  width: 33%;
+  height: 43%;
+  border: 7px solid #77502c;
+  border-radius: 44% 44% 18% 18%;
+  background: #8ca34e;
+  box-shadow: inset 0 0 0 3px #f3dcaa;
+}
+
+.kq-create-minigame .kq-room-window::before,
+.kq-create-minigame .kq-room-window::after {
+  position: absolute;
+  z-index: 1;
+  background: #77502c;
+  content: "";
+}
+
+.kq-create-minigame .kq-room-window::before {
+  top: 48%;
+  right: -2px;
+  left: -2px;
+  height: 6px;
+}
+
+.kq-create-minigame .kq-room-window::after {
+  top: -2px;
+  bottom: -2px;
+  left: 48%;
+  width: 6px;
+}
+
+.kq-create-minigame .kq-room-window span,
+.kq-create-minigame .kq-room-window i {
+  display: none;
+}
+
+.kq-create-minigame .kq-room-shelf {
+  position: absolute;
+  top: 17%;
+  right: 8%;
+  left: auto;
+  display: flex;
+  width: 37%;
+  height: 22%;
+  align-items: center;
+  justify-content: space-around;
+  border: 5px solid #77502c;
+  border-radius: 8px;
+  background: #9c683b;
+  box-shadow: 0 8px 0 #77502c;
+  color: #ffe7a9;
+  font-size: 19px;
+}
+
+.kq-create-minigame .kq-room-shelf span {
+  position: static;
+  display: block;
+  color: #ffe7a9;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.kq-create-minigame .kq-room-rug {
+  position: absolute;
+  z-index: 1;
+  bottom: 5%;
+  left: 24%;
+  width: 53%;
+  height: 20%;
+  border: 4px dashed #c79847;
+  border-radius: 50%;
+  background: #e9cb78;
+}
+
+.kq-create-minigame .kq-room-floor {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 23%;
+  border-top: 5px solid #94633c;
+  background: #c9a47e;
+}
+
+.kq-create-minigame .kq-decor-item {
+  position: absolute;
+  z-index: 3;
+  display: grid;
+  width: 48px;
+  height: 54px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: #38291e;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 1;
+  filter: drop-shadow(0 2px 1px rgb(70 43 23 / 25%));
+  transform: translate(-50%, -50%);
+  touch-action: manipulation;
+}
+
+.kq-create-minigame .kq-decor-item.character {
+  width: 54px;
+  height: 64px;
+}
+
+.kq-create-minigame .kq-decor-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.kq-create-minigame .kq-decor-item:focus-visible {
+  outline: 3px solid #0879ff;
+  outline-offset: 2px;
+}
+
+.kq-create-minigame .kq-decoration-label {
+  display: flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 8px 2px 6px;
+  color: #c6c2cc;
+  font-size: 11px;
+}
+
+.kq-create-minigame .kq-decoration-label b {
+  color: #d6ff00;
+  font-size: 12px;
+}
+
+.kq-create-minigame .kq-decoration-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin: 0 0 9px;
+}
+
+.kq-create-minigame .kq-decoration-tabs button {
+  min-height: 38px;
+  border: 1px solid #48464d;
+  border-radius: 20px;
+  background: #1d1b20;
+  color: #e7e5eb;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.kq-create-minigame .kq-decoration-tabs button.active {
+  border-color: #d6ff00;
+  background: #d6ff00;
+  color: #111014;
+}
+
+.kq-create-minigame .kq-decoration-choices {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.kq-create-minigame .kq-decoration-choice {
+  display: flex;
+  min-width: 0;
+  min-height: 82px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 6px 3px;
+  border: 2px solid transparent;
+  border-radius: 17px;
+  background: #1d1b20;
+  color: #fff;
+  cursor: pointer;
+}
+
+.kq-create-minigame .kq-decoration-choice[hidden] {
+  display: none;
+}
+
+.kq-create-minigame .kq-decoration-choice:active {
+  border-color: #d6ff00;
+  transform: scale(.96);
+}
+
+.kq-create-minigame .kq-decoration-choice > span,
+.kq-create-minigame .kq-decoration-choice > img {
+  width: 43px;
+  height: 43px;
+}
+
+.kq-create-minigame .kq-decoration-choice > span {
+  display: grid;
+  place-items: center;
+  font-size: 31px;
+}
+
+.kq-create-minigame .kq-decoration-choice > img {
+  object-fit: contain;
+}
+
+.kq-create-minigame .kq-decoration-choice small {
+  overflow: hidden;
+  max-width: 100%;
+  font-size: 9px;
+  font-weight: 750;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.kq-create-minigame .kq-room-button {
+  margin-top: 0;
+}
+
+.kq-create-minigame .kq-decoration-label.kq-needs-item {
+  animation: kq-decoration-nudge .18s ease-in-out 3;
+}
+
+@keyframes kq-decoration-nudge {
+  50% { transform: translateX(4px); }
+}
+
+@media (max-width: 360px) {
+  .kq-create-minigame { padding-right: 12px; padding-left: 12px; }
+  .kq-create-minigame .kq-decoration-choices { gap: 6px; }
+  .kq-create-minigame .kq-decoration-choice { min-height: 76px; }
+  .kq-create-minigame .kq-decor-item { width: 42px; height: 48px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kq-create-minigame .kq-decoration-label.kq-needs-item { animation: none; }
+}

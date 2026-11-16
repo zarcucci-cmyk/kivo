@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#111014">
+    <meta name="description" content="KIVO: pequeñas acciones, grandes cambios. Un día a la vez.">
+    <title>KIVO — Un día a la vez</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="kivo-jump.css">
+    <link rel="stylesheet" href="kivo-quest.css">
+    <link rel="stylesheet" href="kivo-quest-rest.css">
+    <link rel="stylesheet" href="kivo-quest-create.css">
+    <link rel="stylesheet" href="kivo-phrases.css">
+    <script src="kivo-sound.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="kivo-jump.js" defer></script>
+    <script src="kivo-quest.js" defer></script>
+    <script src="kivo-phrases.js" defer></script>
+  </head>
+  <body>
+    <div class="phone" id="app">
+      <div class="device-status" aria-hidden="true">
+        <span class="dynamic-island"></span>
+        <span class="device-icons"><i class="signal-icon"></i><i class="wifi-icon">⌁</i><i class="battery-icon"><b></b></i></span>
+      </div>
+      <main id="app-view" aria-live="polite"></main>
+      <nav class="bottom-nav" id="bottom-nav" aria-label="Navegación principal"></nav>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      <div class="modal-root" id="modal-root"></div>
+    </div>
+  </body>
+</html>
